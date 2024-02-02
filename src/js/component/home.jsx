@@ -24,9 +24,7 @@ function Home() {
 	// empty dependency array: run once
 	// array with state variable: only update when state changes
 
-	function calculateSeconds(aCounter, placeValue) {
-		return Math.floor(aCounter / placeValue) % 10
-	}
+	
 
 	return (
 		<>
