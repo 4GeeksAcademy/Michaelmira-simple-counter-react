@@ -1,6 +1,7 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
+import SimpleCounter from "./component/SimpleCounter.css";
 
 // include your styles into the webpack bundle
 import "../styles/index.css";
