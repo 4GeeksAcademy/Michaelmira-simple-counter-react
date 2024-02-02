@@ -10,11 +10,10 @@ function Home() {
 	const [counter, SetCounter] = useState(0);
 
 	useEffect(() => {
-
+		// componet mounting
 		const interval = setInterval(() => {
 			SetCounter(counter => counter + 1)
 		}, 1000);
-		console.log(counter)
 
 		// componet unmount
 		return () => clearInterval(interval)
