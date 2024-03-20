@@ -50,9 +50,9 @@ function Home() {
 				<div className="div">
 					<div className="row">
 						<div className="col">
-							<h5 className="d-flex" >Set Countdown:</h5>
+							<h5 className="" >Set Countdown:</h5>
 						</div>
-						<div className="col">
+						<div className="col pt-3">
 							<input 
 							type ="number"
 							value = {countdownValue}
@@ -61,10 +61,29 @@ function Home() {
 
 							
 						</div>
-						<div className="col">
-							<button onClick={togglePause}>
-								{isPaused ? "Resume" : "Pause" }
-							</button>
+						<div className="col pt-3">
+						<button
+							style={{
+								backgroundColor: isPaused ? '#FF5733' : '#4CAF50', /* Red when paused, Green when not paused */
+								border: 'none',
+								color: 'white',
+								padding: '15px 32px',
+								textAlign: 'center',
+								textDecoration: 'none',
+								display: 'inline-block',
+								fontSize: '16px',
+								margin: '4px 2px',
+								transitionDuration: '0.4s',
+								cursor: 'pointer',
+								borderRadius: '12px'
+							}}
+							onClick={togglePause}
+							onMouseOver={(e) => e.target.style.backgroundColor = isPaused ? '#FF8C7B' : '#45a049'} /* Darker Green when not paused */
+							onMouseOut={(e) => e.target.style.backgroundColor = isPaused ? '#FF5733' : '#4CAF50'} /* Original Green when not paused */
+						>
+							{isPaused ? "Resume" : "Pause"}
+						</button>
+
 						</div>
 					</div>
 				</div>
