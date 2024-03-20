@@ -46,19 +46,28 @@ function Home() {
 			tensDigit = {calculateSeconds(counter, 10)}
 			onesDigit = {calculateSeconds(counter, 1)}
 			/>
-			<div className="div">
-				<label>
-					Set Countdown:
-					<input 
-					type ="number"
-					value = {countdownValue}
-					onChange= {handleCountdownInputChange}
-					/>
+			<div className="d-flex justify-content-center">
+				<div className="div">
+					<div className="row">
+						<div className="col">
+							<h5 className="d-flex" >Set Countdown:</h5>
+						</div>
+						<div className="col">
+							<input 
+							type ="number"
+							value = {countdownValue}
+							onChange= {handleCountdownInputChange}
+							/>
 
-				</label>
-				<button onClick={togglePause}>
-					{isPaused ? "Resume" : "Pause" }
-				</button>
+							
+						</div>
+						<div className="col">
+							<button onClick={togglePause}>
+								{isPaused ? "Resume" : "Pause" }
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	);
